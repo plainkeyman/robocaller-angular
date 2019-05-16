@@ -5,12 +5,14 @@ import { MaterialModule } from '@material';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
 import { CampaignComponent } from './campaign/campaign.component';
 import { CampaignListContainer } from './campaign-list/campaign-list.container';
+import { NewCampaignDialogComponent } from './new-campaign-dialog/new-campaign-dialog.component';
 
 @NgModule({
   declarations: [
     CampaignListComponent,
     CampaignListContainer,
-    CampaignComponent
+    CampaignComponent,
+    NewCampaignDialogComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { CampaignListContainer } from './campaign-list/campaign-list.container';
     CampaignListComponent,
     CampaignListContainer,
     CampaignComponent
-  ]
+  ],
+  entryComponents: [NewCampaignDialogComponent]
 })
 export class RobocallerModule { }
