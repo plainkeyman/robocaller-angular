@@ -1,0 +1,12 @@
+<section class="heading">
+  <h2>Campaigns</h2>
+  <button mat-mini-fab color="accent"><mat-icon>add</mat-icon></button>
+</section>
+
+<mat-divider></mat-divider>
+
+<h2 *ngIf="!campaigns.length">No campaings</h2>
+
+<mat-accordion *ngIf="campaigns.length">
+  <app-campaign *ngFor="let campaign of campaigns" [campaign]="campaign"></app-campaign>
+</mat-accordion>

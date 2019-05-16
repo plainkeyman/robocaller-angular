@@ -20,7 +20,9 @@
     ],
     "paths": {
       "@core-ui": ["./src/app/core-ui"],
-      "@auth": ["./src/app/auth"]
+      "@auth": ["./src/app/auth"],
+      "@material": ["./src/app/material"],
+      "@robocaller": ["./src/app/robocaller"]
     }
   }
 }

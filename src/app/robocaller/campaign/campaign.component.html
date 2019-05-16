@@ -1,0 +1,14 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>{{ campaign.title }}</mat-panel-title>
+    <mat-panel-description *ngIf="campaign?.lastRan">
+      {{ campaign?.lastRan }}
+      <mat-icon>{{ campaign.scheduled ? 'stop' : 'play_arrow' }}</mat-icon>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+
+  <mat-action-row>
+    <button mat-flat-button color="primary">{{ campaign.scheduled ? 'Stop' : 'Start' }}</button>
+  </mat-action-row>
+
+</mat-expansion-panel>

@@ -5,17 +5,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { MaterialModule } from '@material';
+import { CoreUiModule } from '@core-ui';
+import { RobocallerModule } from '@robocaller';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 
-import { MaterialModule } from './material/material.module';
-import { CoreUiModule } from './core-ui/core-ui.module';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireAuthModule,
     MaterialModule,
     environment.production ? [] : [AkitaNgDevtools.forRoot(), AkitaNgRouterStoreModule.forRoot()],
-    CoreUiModule
+    CoreUiModule,
+    RobocallerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
