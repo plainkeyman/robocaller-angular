@@ -1,8 +1,9 @@
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>{{ campaign.title }}</mat-panel-title>
-    <mat-panel-description *ngIf="campaign?.lastRan">
-      {{ campaign?.lastRan }}
+    <mat-panel-description>
+      <ng-container *ngIf="campaign?.lastRan">{{ campaign.lastRan | date: 'short' }}</ng-container>
+      <ng-container *ngIf="!campaign?.lastRan">Never ran</ng-container>
       <mat-icon>{{ campaign.scheduled ? 'stop' : 'play_arrow' }}</mat-icon>
     </mat-panel-description>
   </mat-expansion-panel-header>

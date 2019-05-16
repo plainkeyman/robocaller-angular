@@ -7212,6 +7212,11 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
+twiml-builder@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/twiml-builder/-/twiml-builder-1.1.0.tgz#0cd5454ecd3c64593ef219461b4f82ab1cbef716"
+  integrity sha1-DNVFTs08ZFk+8hlGG0+Cqxy+9xY=
+
 type-is@~1.6.16, type-is@~1.6.17:
   version "1.6.18"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.18.tgz#4e552cd05df09467dcbc4ef739de89f2cf37c131"
