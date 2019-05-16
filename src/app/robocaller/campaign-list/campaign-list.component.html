@@ -5,7 +5,7 @@
 
 <mat-divider></mat-divider>
 
-<h2 *ngIf="!campaigns.length">No campaings</h2>
+<h3 *ngIf="!campaigns.length">No campaings</h3>
 
 <mat-accordion *ngIf="campaigns.length">
   <app-campaign *ngFor="let campaign of campaigns" [campaign]="campaign"></app-campaign>

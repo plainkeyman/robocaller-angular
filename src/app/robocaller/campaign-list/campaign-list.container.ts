@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthQuery } from '@auth';
 
 @Component({
-  selector: 'app-campain-list-container',
-  template: `<app-campaign-list></app-campaign-list>`
+  selector: 'app-campaign-list-container',
+  template: `<app-campaign-list [campaigns]="(user$ | async)?.campaigns"></app-campaign-list>`
 })
-export class CampaignListContainer {
-  constructor() { }
+export class CampaignListContainer implements OnInit {
+  user$;
+
+  constructor(private authQuery: AuthQuery) { }
+
+  ngOnInit() {
+    this.user$ = this.authQuery.select();
+  }
+
 }
