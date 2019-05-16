@@ -1,0 +1,5 @@
+<mat-toolbar class="navbar" color="primary">
+  Robocaller <ng-container *ngIf="(user$ | async).uid">- Hello {{ (user$ | async).displayName }}</ng-container>
+  <button *ngIf="!(user$ | async).uid" mat-flat-button (click)="authService.googleSignIn()" color="accent">Login</button>
+  <button *ngIf="(user$ | async).uid" mat-flat-button (click)="authService.signOut()" color="accent">Logout</button>
+</mat-toolbar>

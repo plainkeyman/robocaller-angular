@@ -17,6 +17,10 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@core-ui": ["./src/app/core-ui"],
+      "@auth": ["./src/app/auth"]
+    }
   }
 }
