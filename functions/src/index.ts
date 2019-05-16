@@ -35,7 +35,7 @@ export const taskRunner = functions.runWith({ memory: '2GB' }).pubsub
     const query = db.collection('tasks')
       .where('performAt', '<=', now)
       .where('status', '==', 'scheduled');
-    const tasks: Array<any> = await query.get();
+    const tasks = await query.get();
 
     const jobs: Promise<any>[] = [];
 
