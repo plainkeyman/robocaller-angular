@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBiVZBEap60HcORtnVeAhiEpWNxTWxkXmE',
+    authDomain: 'robocaller-buttars.firebaseapp.com',
+    databaseURL: 'https://robocaller-buttars.firebaseio.com',
+    projectId: 'robocaller-buttars',
+    storageBucket: 'robocaller-buttars.appspot.com',
+    messagingSenderId: '423833048600',
+    appId: '1:423833048600:web:13691374f989f828'
+  }
 };
 
 /*

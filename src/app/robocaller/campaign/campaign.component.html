@@ -1,4 +1,4 @@
-<mat-expansion-panel>
+<mat-expansion-panel displayMode="flat" [expanded]="expanded">
   <mat-expansion-panel-header>
     <mat-panel-title>{{ campaign.title }}</mat-panel-title>
     <mat-panel-description>
@@ -9,7 +9,7 @@
   </mat-expansion-panel-header>
 
   <mat-action-row>
-    <button mat-flat-button color="primary">{{ campaign.scheduled ? 'Stop' : 'Start' }}</button>
+    <button mat-flat-button (click)="toggleCampaign.emit(campaign)" color="primary">{{ campaign.scheduled ? 'Stop' : 'Start' }}</button>
   </mat-action-row>
 
 </mat-expansion-panel>

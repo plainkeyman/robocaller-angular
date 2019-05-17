@@ -12,6 +12,7 @@ import { NewCampaignDialogComponent } from '../new-campaign-dialog/new-campaign-
 export class CampaignListComponent implements OnInit {
   @Input() campaigns: Array<Campaign> = [];
   @Output() newCampaign = new EventEmitter();
+  @Output() toggleCampaign = new EventEmitter();
 
   constructor(public dialog: MatDialog) { }
 

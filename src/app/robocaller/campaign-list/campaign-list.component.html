@@ -8,5 +8,9 @@
 <h3 *ngIf="!campaigns.length">No campaings</h3>
 
 <mat-accordion *ngIf="campaigns.length">
-  <app-campaign *ngFor="let campaign of campaigns" [campaign]="campaign"></app-campaign>
+  <app-campaign
+   *ngFor="let campaign of campaigns"
+   [campaign]="campaign"
+   (toggleCampaign)="toggleCampaign.emit($event)"
+  ></app-campaign>
 </mat-accordion>

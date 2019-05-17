@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Campaign } from './state';
 
 @Component({
@@ -8,6 +8,8 @@ import { Campaign } from './state';
 })
 export class CampaignComponent implements OnInit {
   @Input() campaign: Campaign;
+  @Input() expanded = false;
+  @Output() toggleCampaign = new EventEmitter();
 
   constructor() { }
 
