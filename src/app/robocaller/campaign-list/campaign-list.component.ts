@@ -26,7 +26,11 @@ export class CampaignListComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
       console.log('Closed');
+      if (result) {
+        this.newCampaign.emit(result);
+      }
     });
   }
 

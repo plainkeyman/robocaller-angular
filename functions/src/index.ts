@@ -14,11 +14,11 @@ interface Workers {
 const workers: Workers = {
   helloWorld: () => db.collection('logs').add({ hello: 'world' }),
 
-  makeCall: async ({ phoneNum, twimletUrl }) => {
+  makeCall: async ({ phoneNum, twimlUrl }) => {
     const call = await robocaller.calls.create({
       to: phoneNum,
       from: '+18016147190',
-      url: encodeURI(twimletUrl),
+      url: encodeURI(twimlUrl),
       method: 'GET'
     });
 

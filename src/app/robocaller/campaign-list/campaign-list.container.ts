@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
+import { take } from 'rxjs/operators';
+
 import { untilDestroyed } from 'ngx-take-until-destroy';
 
 import { AuthQuery, AuthService } from '@auth';
@@ -11,6 +13,7 @@ import { Campaign } from '../campaign/state';
     <app-campaign-list
      [campaigns]="(user$ | async)?.campaigns"
      (toggleCampaign)="toggleCampaign($event)"
+     (newCampaign)="addCampaign($event)"
     ></app-campaign-list>
     <pre>{{ user$ | async | json  }}</pre>
   `
@@ -29,5 +32,10 @@ export class CampaignListContainer implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() { /* Note: This is needed for the untilDestoryed pipe */ }
+
+  addCampaign = (campaign: Campaign) => {
+    console.dir(campaign);
+    this.authService.addCampaign(campaign).pipe(take(1)).subscribe();
+  }
 
 }

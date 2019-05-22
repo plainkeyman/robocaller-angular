@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from '@material';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
@@ -16,7 +17,8 @@ import { NewCampaignDialogComponent } from './new-campaign-dialog/new-campaign-d
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     CampaignListComponent,
